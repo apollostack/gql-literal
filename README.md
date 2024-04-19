@@ -86,11 +86,11 @@ const query = gql`
 `
 ```
 
-**Note:** _While it may seem redundant to have to both embed the `userFragment` variable in the template literal **AND** spread the `...User_user` fragment in the graphQL selection set, this requirement makes static analysis by tools such as `eslint-plugin-graphql` possible._
+**Note:** _While it may seem redundant to have to both embed the `userFragment` variable in the template literal **AND** spread the `...User_user` fragment in the graphQL selection set, this requirement makes static analysis by tools such as `graphql-eslint` possible._
 
 #### Why use this?
 
-GraphQL strings are the right way to write queries in your code, because they can be statically analyzed using tools like [eslint-plugin-graphql](https://github.com/apollographql/eslint-plugin-graphql). However, strings are inconvenient to manipulate, if you are trying to do things like add extra fields, merge multiple queries together, or other interesting stuff.
+GraphQL strings are the right way to write queries in your code, because they can be statically analyzed using tools like [graphql-eslint](https://github.com/B2o5T/graphql-eslint). However, strings are inconvenient to manipulate, if you are trying to do things like add extra fields, merge multiple queries together, or other interesting stuff.
 
 That's where this package comes in - it lets you write your queries with [ES2015 template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) and compile them into an AST with the `gql` tag.
 
